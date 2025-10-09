@@ -12,13 +12,17 @@ class _Tela3State extends State<Tela3> {
 
   void aumentar() {
     setState(() {
-      this.num += 5;
+      if (this.num + 5 <= 100) {
+        this.num += 5;
+      }
     });
   }
 
   void diminuir() {
     setState(() {
-      this.num -= 5;
+      if (this.num - 5 >= 0) {
+        this.num -= 5;
+      }
     });
   }
 
@@ -38,7 +42,20 @@ class _Tela3State extends State<Tela3> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(num.toString(), style: TextStyle(fontSize: 80)),
+              Text(num.toStringAsFixed(2), style: TextStyle(fontSize: 80)),
+              Slider(
+                inactiveColor: Colors.deepOrange,
+                activeColor: Colors.deepPurple,
+                min: 0,
+                max: 100,
+                divisions: 20,
+                value: num.toDouble(),
+                onChanged: (double newValue) {
+                  setState(() {
+                    num = newValue.round();
+                  });
+                },
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,6 +86,7 @@ class _Tela3State extends State<Tela3> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orangeAccent,
                       textStyle: TextStyle(color: Colors.black),
+                      disabledBackgroundColor: Colors.deepPurpleAccent,
                     ),
                     onPressed: () {
                       resetar();

@@ -48,40 +48,49 @@ class Tela1 extends StatelessWidget {
                   color: Colors.orangeAccent,
                   shadowColor: Colors.indigoAccent,
                   elevation: 15,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.favorite, // O ícone do Material Design
-                            size: 40.0, // Define o tamanho do ícone
-                            color: Colors.purpleAccent, // Define a cor do ícone
-                          ),
-                          Text(
-                            "FrontEnd com Angular",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              letterSpacing: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: LinearGradient(
+                        colors: [Colors.green, Colors.white, Colors.red],
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.favorite, // O ícone do Material Design
+                              size: 40.0, // Define o tamanho do ícone
+                              color:
+                                  Colors.purpleAccent, // Define a cor do ícone
                             ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/angular.png",
-                            width: 150,
-                            height: 150,
-                          ),
-                        ],
-                      ),
-                    ],
+                            Text(
+                              "FrontEnd com Angular",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: FontStyle.italic,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/images/angular.png",
+                              width: 150,
+                              height: 150,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -91,40 +100,48 @@ class Tela1 extends StatelessWidget {
                   color: Colors.orangeAccent,
                   shadowColor: Colors.indigoAccent,
                   elevation: 15,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.favorite, // O ícone do Material Design
-                            size: 40.0, // Define o tamanho do ícone
-                            color: Colors.indigo, // Define a cor do ícone
-                          ),
-                          Text(
-                            "Mobile usando flutter",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              letterSpacing: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: LinearGradient(
+                        colors: [Colors.blue, Colors.white, Colors.orange],
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.favorite, // O ícone do Material Design
+                              size: 40.0, // Define o tamanho do ícone
+                              color: Colors.indigo, // Define a cor do ícone
                             ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/flutter.png",
-                            width: 150,
-                            height: 150,
-                          ),
-                        ],
-                      ),
-                    ],
+                            Text(
+                              "Mobile usando flutter",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: FontStyle.italic,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/images/flutter.png",
+                              width: 150,
+                              height: 150,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -134,40 +151,52 @@ class Tela1 extends StatelessWidget {
                   color: Colors.orangeAccent,
                   shadowColor: Colors.indigoAccent,
                   elevation: 15,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.favorite, // O ícone do Material Design
-                            size: 40.0, // Define o tamanho do ícone
-                            color: Colors.limeAccent, // Define a cor do ícone
-                          ),
-                          Text(
-                            "Backend com spring",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              letterSpacing: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.deepPurple,
+                          Colors.white,
+                          Colors.deepOrange,
+                        ],
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.favorite, // O ícone do Material Design
+                              size: 40.0, // Define o tamanho do ícone
+                              color: Colors.limeAccent, // Define a cor do ícone
                             ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/spring.png",
-                            width: 150,
-                            height: 150,
-                          ),
-                        ],
-                      ),
-                    ],
+                            Text(
+                              "Backend com spring",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: FontStyle.italic,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/images/spring.png",
+                              width: 150,
+                              height: 150,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
