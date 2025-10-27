@@ -17,21 +17,29 @@ class _TelaApiState extends State<TelaApi> {
   void initState() {
     //funcao que reinicia o estado ao entrar na pagina
     super.initState();
-    getValor();
+    getValue();
   }
 
-  void getValor() async {
-    final response = await http.get(Uri.parse("https"));
+  void getValue() async {
+    final response = await http.get(
+      Uri.parse("https://swapi.dev/api/people/1"),
+    );
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       setState(() {
-        valor = data[1]["color"];
+        valor = data["name"];
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold());
+    return MaterialApp(
+      home: Scaffold(
+        body: valor == null
+            ? Center(child: CircularProgressIndicator())
+            : Center(child: Text("$valor")),
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:api/api.dart';
+import 'package:api/apiall.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,6 +47,10 @@ class _LoginPageState extends State<LoginPage> {
         message = "Existem credenciais incorretas";
       });
     }
+  }
+
+  void listall() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Apiall()));
   }
 
   @override
@@ -115,6 +120,16 @@ class _LoginPageState extends State<LoginPage> {
                     login();
                   },
                   child: Text("Login"),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepOrangeAccent,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    listall();
+                  },
+                  child: Text("Listar tudo"),
                 ),
                 Text("$message"), //mostra valor da mensagem caso errar
               ],
