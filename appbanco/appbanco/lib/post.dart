@@ -1,3 +1,5 @@
+import 'package:appbanco/delete.dart';
+import 'package:appbanco/main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +35,7 @@ class _PostPageState extends State<PostPage> {
         erro = "Erro ao enviar temperatura";
       });
     }
+    // Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
   }
 
   @override
@@ -46,6 +49,15 @@ class _PostPageState extends State<PostPage> {
               Text("Insira a sua temperatura"),
               TextField(controller: novatemperatura),
               ElevatedButton(onPressed: postValue, child: Text("Enviar")),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DeletePage()),
+                  );
+                },
+                child: Text("Ir para delete"),
+              ),
             ],
           ),
         ),
