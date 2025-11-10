@@ -18,7 +18,6 @@ class _PostPageState extends State<PostPage> {
   @override
   void initState() {
     super.initState();
-    postValue();
   }
 
   String? erro;
@@ -49,15 +48,6 @@ class _PostPageState extends State<PostPage> {
               Text("Insira a sua temperatura"),
               TextField(controller: novatemperatura),
               ElevatedButton(onPressed: postValue, child: Text("Enviar")),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DeletePage()),
-                  );
-                },
-                child: Text("Ir para delete"),
-              ),
             ],
           ),
         ),
